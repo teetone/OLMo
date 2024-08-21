@@ -40,4 +40,5 @@ class OLMoConfig(PretrainedConfig):
 # Register the config class so that it is available for transformer pipelines, auto-loading etc.
 # OLMo is integrated directly in transformers from v4.40.0 onwards, but the version in transformers
 # may not support the newest architectures we create.
-AutoConfig.register("hf_olmo", OLMoConfig)
+AutoConfig.register("hf_olmo", OLMoConfig, exist_ok=True)
+print("-" * 20 + " Registered OLMo " + "-" * 20)
